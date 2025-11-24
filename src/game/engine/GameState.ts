@@ -1,0 +1,12 @@
+export enum GameState {
+    DEALING,
+    PLAYER_TURN,
+    AI_TURN,
+    PLAYER_GUESSING,
+    AI_GUESSING,
+    GAME_OVER,
+    VICTORY,
+    DEFEAT,
+    BOTH_VICTORY,
+    BOTH_DEFEAT
+}
