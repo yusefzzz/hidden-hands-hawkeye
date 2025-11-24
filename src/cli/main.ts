@@ -105,6 +105,7 @@ async function playAgainstRobot(){
         switch (game.getState()){
 
             case GameState.PLAYER_TURN: 
+                console.log("Sum of your table cards: " + game.getTableValue(0))
                 console.log("Cards to choose from: ");
                 let playerHand: Deck = game.getHand(0);
                 console.log(playerHand.displayDeckStr());
@@ -153,7 +154,7 @@ async function playAgainstRobot(){
                 break;
 
             case GameState.AI_GUESSING:
-                console.log("You have put a card down\n");
+                console.log("You have put a card down, the sum of your table is now " + game.getTableValue(0) + "\n");
                 console.log("AI's guesses: ");
                 let aiGuesses = game.getGuesses(1)
                 for (let i = 1; i < aiGuesses.length + 1; i++){
